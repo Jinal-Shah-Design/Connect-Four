@@ -1,28 +1,66 @@
 /* game board table */
 
 #board td {
-  width: 50px;
-  height: 50px;
-  border: solid 1px #666;
+  width: 90px;
+  height: 90px;
+  border: solid 1px white;
+  background-color:  #d57681;
+
 }
 
+
+button {
+  height: 60px;
+  width: 280px;
+  border-radius: 20px;
+  border-color: transparent;
+  background-color:  #fabcb6;
+  color: #212121;
+  font-size: 32px;
+  font-family: 'Nunito Sans', sans-serif;
+  margin-right: 8vh;
+  margin-top: 4vh; 
+}
+
+#hero {
+ height: 100vh;
+ background-color: #d57681 ;
+ background-image: url('Images/background.png');
+ background-position: top;
+ background-size: cover;
+ background-repeat: no-repeat;
+}
+
+#headline {
+  padding-top: 45vh;
+  font-family: 'Nunito Sans', sans-serif;
+  color: #fef2f1;
+  font-size: 8vh;
+  margin-right: 8vh;
+}
 
 /* pieces are div within game table cells: draw as colored circles */
 
 .piece {
   /* TODO: make into circles */
-  margin: 10px 5px;
-  width: 80%;
-  height: 80%;
+  margin: 5px;
+  width: 90%;
+  height: 90%;
   border-radius: 100px;
 }
 
 .piece.p1 {
-  background-color: red;
+  background-image: url('Images/cady.gif');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .piece.p2 {
-  background-color: blue;
+  background-image: url('Images/regina.gif');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 /* TODO: make pieces red/blue,  depending on player 1/2 piece */
@@ -30,9 +68,10 @@
 /* column-top is table row of clickable areas for each column */
 
 #column-top td {
-  border: dashed 1px lightgray;
+  border: dashed 2px white;
+  background-color: #fabcb6;
 }
 
 #column-top td:hover {
-  background-color: gold;
+  background-color: #fef2f1;
 }

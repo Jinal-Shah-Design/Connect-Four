@@ -1,13 +1,31 @@
 <!doctype html>
 <head>
   <title>Connect 4</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link href="connect4.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@800&display=swap" rel="stylesheet">
 </head>
 <body>
-
+<div class="container-fluid" id="hero">
+  <div class="row" id="headline">
+  <div class="col-12 d-flex justify-content-end">
+    <p>PLAY CONNECT FOUR</p>
+  </div>
+</div>
+  <div class="row">
+  <div class="col-12 d-flex justify-content-end" id="start-game">
+    <button>Start Game</button>
+</div>
+</div>
+</div>
 <div id="game">
+<div class="container-fluid" id="start">
+<div class="col-12 d-flex justify-content-center">
   <table id="board"></table>
 </div>
+</div>
+</div>
+
 
 <script src="connect4.js"></script>
 
