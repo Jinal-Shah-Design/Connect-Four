@@ -1,13 +1,56 @@
 /* game board table */
 
+body {
+  background-color:#212121;  ;
+}
+
 #board td {
   width: 90px;
   height: 90px;
   border: solid 1px white;
   background-color:  #d57681;
-
 }
 
+#player-1 {
+  background-image: url('Images/cady.gif');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 120px; 
+  width: 120px;
+  border-radius: 200px;
+}
+
+#player-2 {
+  background-image: url('Images/regina.gif');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 120px; 
+  width: 120px;
+  border-radius: 200px;
+}
+.player {
+  height: 120px; 
+  width: 120px;
+  border-radius: 200px;
+}
+
+.sub-head {
+  margin-left: 1vh; 
+  margin-top: 2vh;
+  color: white; 
+  font-size: 30px;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+#game {
+  margin-top: 10vh; 
+}
+.gameBoard {
+  margin-top: -100vh;
+  transition: margin-top 1s;
+}
 
 button {
   height: 60px;
@@ -31,6 +74,15 @@ button {
  background-repeat: no-repeat;
 }
 
+#game {
+  height: 100vh;
+  background-image: url('Images/background-2.jpg');
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+ }
+ 
+
 #headline {
   padding-top: 45vh;
   font-family: 'Nunito Sans', sans-serif;
@@ -47,7 +99,19 @@ button {
   width: 90%;
   height: 90%;
   border-radius: 100px;
+  animation-name: fall-animation;
+	animation-duration: 725ms;
 }
+
+@keyframes fall-animation {
+	from {
+		transform: translateY(-480px);
+	}
+	to {
+		transform: translateY(0);
+	}
+}
+
 
 .piece.p1 {
   background-image: url('Images/cady.gif');

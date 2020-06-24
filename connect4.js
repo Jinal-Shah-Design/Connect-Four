@@ -26,6 +26,16 @@ function makeBoard() {
   // TODO: set "board" to empty HEIGHT x WIDTH matrix array
 }
 
+function revealBoard(){
+  let startBtn = document.getElementById('start-game')
+  console.log(startBtn)
+  startBtn.addEventListener("click",function (){
+    let hero = document.getElementById('hero')
+    hero.setAttribute("class", "gameBoard")
+  })
+}
+revealBoard();
+
 /** makeHtmlBoard: make HTML table and row of column tops. */
 
 function makeHtmlBoard() {
@@ -108,6 +118,7 @@ function endGame(msg) {
 
   makeHtmlBoard(); 
   makeBoard();
+  
 }
 
 /** handleClick: handle click of column top to play piece */

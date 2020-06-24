@@ -13,20 +13,32 @@
   </div>
 </div>
   <div class="row">
-  <div class="col-12 d-flex justify-content-end" id="start-game">
-    <button>Start Game</button>
+  <div class="col-12 d-flex justify-content-end">
+    <button id="start-game">Start Game</button>
 </div>
 </div>
 </div>
 <div id="game">
-<div class="container-fluid" id="start">
-<div class="col-12 d-flex justify-content-center">
-  <table id="board"></table>
+  <div class="container-fluid" id="start">
+    <div class="row">
+    <div class="col d-flex justify-content-center">
+    <div class="flex-column justify-content-center">
+      <div id="player-1"></div>
+      <p class="sub-head">Player 1</p>
+    </div>
+  </div>
+  <div class="col-6 d-flex justify-content-center">
+    <table id="board"></table>
+  </div>
+  <div class="col d-flex justify-content-center">
+    <div class="flex-column justify-content-center">
+    <div id="player-2"></div>
+    <p class="sub-head">Player 2</p>
+    </div>
+  </div>
+  </div>
 </div>
 </div>
-</div>
-
-
 <script src="connect4.js"></script>
 
 </body>
