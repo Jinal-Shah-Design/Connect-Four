@@ -5,6 +5,27 @@
  * board fills (tie)
  */
 
+ /*Object Oriented Programming:
+ Any global variables should be objects or attributes of that class 
+ Class called connectFourGame {
+   constructor() {
+     this.currentPlayer = 1; 
+     this.board = []; 
+   }
+   makeBoard() {
+
+   }
+ }
+1. Handling start button doesn't need to be inside the game 
+2. RevealBoard doesn't need to be inside of the game 
+3. Everything else should be a function inside of a class 
+let game = new Game(); 
+game.startGame(); 
+
+Use arrow functions in React and new JS libaries 
+
+ */
+
 const WIDTH = 7;
 const HEIGHT = 6;
 
@@ -104,6 +125,7 @@ function placeInTable(y, x) {
   getSpot.appendChild(piece);
   console.log(piece);
 
+  //check for win place in table ****************************
 }
 
 /** endGame: announce game end */
@@ -111,6 +133,8 @@ function placeInTable(y, x) {
 function endGame(msg) {
   // TODO: pop up alert message
   window.alert(msg); 
+  //Bootstrap use a Modal ******************
+  //Replace HTML with and add the You won and connect to JavaScript 
 
   htmlBoard = document.getElementById('board'); 
   htmlBoard.innerHTML = ''; 
@@ -118,7 +142,7 @@ function endGame(msg) {
 
   makeHtmlBoard(); 
   makeBoard();
-  
+
 }
 
 /** handleClick: handle click of column top to play piece */
@@ -137,13 +161,15 @@ function handleClick(evt) {
   // place piece in board and add to HTML table
   // TODO: add line to update in-memory board
   placeInTable(y, x);
-  (currPlayer === 1) ? (currPlayer = 2) : (currPlayer = 1);
 
   // check for win
   if (checkForWin()) {
     return endGame(`Player ${currPlayer} won!`);
   }
-
+  //Pure functions, single responsiblities 
+  //Add saying that 
+  //FindSpotForCol only identify the spot and don't add the 
+  (currPlayer === 1) ? (currPlayer = 2) : (currPlayer = 1);
   // check for tie
   // TODO: check if all cells in board are filled; if so call, call endGame
 
